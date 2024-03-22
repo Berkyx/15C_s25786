@@ -3,6 +3,8 @@ import math
 
 class SquareGenerator:
     def __init__(self, start, end):
+        if start > end:
+            raise ValueError("Start value must be less than or equal to end value")
         self.start = start
         self.end = end
 
@@ -31,9 +33,12 @@ def main():
     print(generated_squares)
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
-    print("~~~~~~~~~~~~~~~~~~~~~~ Task 4 ~~~~~~~~~~~~~~~~~~~~~~")
-    square_roots = [math.sqrt(number) for number in generated_squares]
-    print(square_roots)
+    print("~~~~~~~~~~~~~~~~ Task 4 and Task 5 ~~~~~~~~~~~~~~~~~")
+    try:
+        square_roots = [math.sqrt(number) for number in generated_squares]
+        print(square_roots)
+    except NameError:
+        print("Square roots calculation skipped due to previous error.")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 

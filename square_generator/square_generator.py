@@ -11,4 +11,6 @@ class SquareGenerator:
 
 class CubicGenerator(SquareGenerator):
     def generate(self):
+        if self.start > self.end:
+            raise ValueError("Start value must be less than or equal to end value")
         return [i ** 3 for i in range(self.start, self.end + 1)]

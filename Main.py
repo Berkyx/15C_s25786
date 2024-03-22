@@ -1,5 +1,5 @@
 import math
-from square_generator import SquareGenerator
+from square_generator.square_generator import SquareGenerator
 
 
 def task2(start, end):

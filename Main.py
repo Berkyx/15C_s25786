@@ -1,5 +1,5 @@
 import math
-from square_generator.square_generator import SquareGenerator
+from square_generator.square_generator import SquareGenerator, CubicGenerator
 
 
 def task2(start, end):
@@ -29,6 +29,13 @@ def main():
         print(square_roots)
     except NameError:
         print("Square roots calculation skipped due to previous error.")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
+    print("~~~~~~~~~~~~~~~~~~~~~~ Task 8 ~~~~~~~~~~~~~~~~~~~~~~")
+    square_generator = SquareGenerator(1, 5)
+    print("Square Generator:", square_generator.generate())
+    cubic_generator = CubicGenerator(1, 5)
+    print("Cube Generator:", cubic_generator.generate())
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 

@@ -8,3 +8,7 @@ class SquareGenerator:
     def generate(self):
         return [i ** 2 for i in range(self.start, self.end + 1)]
 
+
+class CubicGenerator(SquareGenerator):
+    def generate(self):
+        return [i ** 3 for i in range(self.start, self.end + 1)]

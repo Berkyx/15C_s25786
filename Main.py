@@ -1,3 +1,6 @@
+import math
+
+
 class SquareGenerator:
     def __init__(self, start, end):
         self.start = start
@@ -24,7 +27,13 @@ def main():
 
     print("~~~~~~~~~~~~~~~~~~~~~~ Task 3 ~~~~~~~~~~~~~~~~~~~~~~")
     square_generator = SquareGenerator(10, 50)
-    print(square_generator.generate())
+    generated_squares = square_generator.generate()
+    print(generated_squares)
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
+    print("~~~~~~~~~~~~~~~~~~~~~~ Task 4 ~~~~~~~~~~~~~~~~~~~~~~")
+    square_roots = [math.sqrt(number) for number in generated_squares]
+    print(square_roots)
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 
